@@ -2,7 +2,7 @@
 <html >
     <head>
         <meta charset="UTF-8">
-        <title>Buscar Repositorios Github</title> 
+        <title>Buscar Repositorios Github</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/bootstrap.css" />
         <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -16,26 +16,26 @@
             <div class="row">
                 <div class="col-sm-12 col-md-12">
                     <div class="container">
-                      <div class="col-sm-12 text-center">
-                        <h2 class="text-success">Búsqueda de Repositorios en Github</h2>
-                      </div>
+                        <div class="col-sm-12 text-center">
+                            <h2 class="text-success">Búsqueda de Repositorios en Github</h2>
+                        </div>
                         <div class="row">
                             <div class="col-xs-8 col-xs-offset-2">
                                 <div class="input-group">                                
                                     <input type="text" class="form-control" name="search-git"
-                                           ng-model="searchTerm" placeholder="Búsqueda..."
-                                            on-enter="doSearch()">
+                                        ng-model="searchTerm" placeholder="Búsqueda..."
+                                        on-enter="doSearch()">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-default" type="button" ng-click="doSearch()">
-                                            <span class="glyphicon glyphicon-search"></span>
-                                        </button>
+                                    <button class="btn btn-default" type="button" ng-click="doSearch()">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                    </button>
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-3 text-center project"
-                         ng-repeat="result in results | offset: pconfig.currentPage*pconfig.itemsPerPage | limitTo: pconfig.itemsPerPage">
+                        ng-repeat="result in results | offset: pconfig.currentPage*pconfig.itemsPerPage | limitTo: pconfig.itemsPerPage">
                         <div class="panel panel-info clearfix">
                             <div class="panel-heading">
                                 <a ng-href="{{result.url}}" class="color-primary" title="Go to project page" target="_blank">
@@ -47,7 +47,7 @@
                                     <div class="col-sm-6">
                                         <img ng-src="{{result.owner.avatarUrl}}" />
                                         <a ng-href="{{result.owner.profileUrl}}" title="Go to profile" target="_blank">
-                                            <span my-truncate="{{result.owner.name}}"></span>
+                                        <span my-truncate="{{result.owner.name}}"></span>
                                         </a>
                                     </div>
                                     <div class="col-sm-6 text-left">
@@ -70,7 +70,6 @@
                         </div>
                     </div>
                 </div>
-                <div id="pagination" class="text-center"></div>
             </div>
         </div>
         <script src="js/index.js"></script>
